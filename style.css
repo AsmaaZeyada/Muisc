@@ -1,0 +1,122 @@
+:root {
+	--height: 50%;
+	--ballTop: calc(var(--height) / 2);
+}
+
+* {
+	margin:0; padding:0;
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	font-family: sans-serif;
+	color: #333;
+	padding: 20px 0;
+}
+
+.ball {
+	width: 35px; height: 35px;
+	border-radius: 50%;
+    position: absolute;
+    bottom: calc(var(--height) - var(--ballTop));
+    transform: translateX(-50%);
+    animation: jumb 1s ease;
+    z-index: -1;
+}
+
+@keyframes jumb {
+	0% {
+		bottom: calc(var(--height) - var(--ballTop));
+	}
+	20% {
+		height: 60px;
+		width: 20px;
+	}
+	35% {
+		height: 35px;
+		width: 35px;
+	}
+	50% {
+		bottom: calc(var(--height) + var(--ballTop) + 150px);
+	}
+	85% {
+		height: 60px;
+		width: 20px;
+	}
+	100% {
+		bottom: calc(var(--height) - var(--ballTop));
+		height: 35px;
+		width: 35px;
+	}
+}
+
+.pads {
+	width:100%; height: var(--height);
+	display: flex;
+	position: absolute;
+	bottom:0;
+	flex-wrap: wrap;
+}
+
+.pad {
+	flex-basis: 150px;
+	position: relative;
+	flex-grow: 1;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.pad:hover {
+	filter: brightness(98%);
+}
+
+.pad:active {
+	filter: brightness(98%);
+	box-shadow:0 0 10px #666 inset;
+}
+
+.pad.active {
+	filter: brightness(98%);
+	box-shadow:0 0 10px #666 inset;
+}
+
+.one {
+	background: #4CAF50;
+}
+
+
+.two {
+	background: #8BC34A;
+}
+
+.three {
+	background: #CDDC39;
+}
+
+
+.four {
+	background: #FFEB3B;
+}
+
+
+.five {
+	background: #FFC107;
+}
+
+.six {
+	background: #FF9800;
+}
+
+.seven {
+	background: #FF5722;
+}
+
+.eight {
+	background: #F44336;
+}
+
+.nine {
+	background: #E91E63;
+}
